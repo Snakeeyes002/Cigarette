@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
+using UserInterface.Models;
 
 namespace UserInterface.Forms
 {
@@ -26,5 +27,11 @@ namespace UserInterface.Forms
 
         }
 
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            Post post = (Post)listBox1.SelectedItem;
+            DetailsForm detailsForm = new DetailsForm(post);
+            detailsForm.Show();
+        }
     }
 }
