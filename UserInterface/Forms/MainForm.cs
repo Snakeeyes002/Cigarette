@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
 
 namespace UserInterface.Forms
 {
@@ -16,5 +17,13 @@ namespace UserInterface.Forms
         {
             InitializeComponent();
         }
+
+        private async void MainForm_Load(object sender, EventArgs e)
+        {
+            WebClient client = new WebClient();
+            string result = await client.DownloadStringTaskAsync("https://jsonplaceholder.typicode.com/posts");
+
+        }
+
     }
 }
