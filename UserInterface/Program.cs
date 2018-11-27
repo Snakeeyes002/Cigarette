@@ -18,7 +18,7 @@ namespace UserInterface
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
-            System.Diagnostics;
+            System.Diagnostics.Debug.WriteLine("sdfsdf");
         }
     }
 }
